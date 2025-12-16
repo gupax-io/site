@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Gupax - A GUI combining P2Pool and XMRig</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link rel="icon" type="image/svg" href="favicon.svg">
+    
+    <style>
+    :root {
+        /* Primary theme color */
+        --primary-color: #FED43F;
+        /* Primary theme text color */
+        --primary-text-color: #543631;
+        --primary-text-color-over: #000;
+        /* Primary theme link color */
+        --primary-link-color: #F9BB2D;
+        /* Secondary color: the background body color */
+        --secondary-color: #fcfaf6;
+        --secondary-text-color: #303030;
+        /* Highlight text color of table of content */
+        --toc-highlight-text-color: #d46e13;
+        --toc-background-color: white;
+        --code-color: #4a4a4a;
+        --code-background-color: white;
+
+        --shadow-color: #ddd;
+
+        /* Font used for headers (h1 & h2) */
+        --header-font-family: "Fira Sans", sans-serif;
+        /* Font used for text */
+        --text-font-family: "Fira Sans", sans-serif;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --primary-color: #382929;
+            --primary-text-color: #d7d7d7;
+            --primary-text-color-over: #FFF;
+            --primary-link-color: #9b9b9b;
+            --secondary-color: #282828;
+            --secondary-text-color: #f2f2f2;
+            --toc-highlight-text-color: #f2f2f2;
+            --toc-background-color: #3a3a3a;
+            --code-color: white;
+            --code-background-color: #4a4a4a;
+
+            --shadow-color: #202020;
+        }
+    }
+</style>
+
+    
+    
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://gupax.io/juice.css">
+    
+    <link rel="stylesheet" href="https://gupax.io/carbon.css">
+    
+</head>
+
+<body>
+    
+
+    <header class="pos-absolute" style="background-color: transparent">
+        
+
+<a href="https://gupax.io/">
+    <div class="logo">
+        <img src="https://gupax.io/monero_pickaxe_color.webp" alt="logo">
+        
+    </div>
+</a>
+
+<nav>
+    
+    
+        
+        <a class="nav-item subtitle-text" href="https://github.com/gupax-io/gupax/releases">Download</a>
+        
+        <a class="nav-item subtitle-text" href="https://github.com/gupax-io/gupax">Github</a>
+        
+    
+</nav>
+
+    </header>
+
+    <div class="hero">
+        
+        <section class="text-center">
+            <h1 class="heading-text" style="font-size: 50px">
+                A GUI to freely mine Monero 
+            </h1>
+            <h3 class="title-text">
+                <b>Gupax</b> is a GUI combining P2Pool and XMRig to mine Monero in the most easy, efficient and decentralized way possible
+            </h3>
+        </section>
+        <img class="hero-image" style="width: 50%" src="https://gupax.io/banner.webp">
+
+        <div class="explore-more text"
+            onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'})">
+            Explore More ⇩
+        </div>
+        <style>
+            .hero section {
+                padding: 0 5rem;
+            }
+
+            @media screen and (max-width: 768px) {
+                .hero section {
+                    padding: 0 2rem;
+                }
+
+                .hero-image {
+                    display: none
+                }
+            }
+        </style>
+        
+    </div>
+
+    
+
+    <main>
+        
+        
+        
+        
+        
+        <div class="toc">
+            <div class="toc-sticky">
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://gupax.io/#guide">Guide</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#system-requirements"><small>- System requirements</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#video-guide"><small>- Video guide</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#basic-setup"><small>- Basic setup:</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#documentation"><small>- Documentation</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://gupax.io/#tabs">Tabs</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#simple-advanced"><small>- Simple&#x2F;Advanced</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#about"><small>- About</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#status"><small>- Status</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#gupax"><small>- Gupax</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#node"><small>- Node</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#p2pool"><small>- P2Pool</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#xmrig"><small>- XMRig</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#proxy"><small>- Proxy</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#xvb"><small>- XvB</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://gupax.io/#daemon-mode">Daemon mode</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://gupax.io/#troubleshooting">Troubleshooting</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#windows"><small>- Windows</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#mac-osx"><small>- Mac OSX</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#p2pool-connection-errors"><small>- P2Pool connection errors</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://gupax.io/#faq">FAQ</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#where-are-updates-downloaded-from"><small>- Where are updates downloaded from?</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#can-i-quit-mid-update"><small>- Can I quit mid-update?</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#bundled-vs-standalone"><small>- Bundled vs Standalone</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#how-much-memory-cpu-does-gupax-use"><small>- How much memory&#x2F;cpu does Gupax use?</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#how-is-sudo-handled-on-macos-linux"><small>- How is sudo handled? (on macOS&#x2F;Linux)</small></a>
+                </div>
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#why-does-gupax-need-to-be-admin-on-windows"><small>- Why does Gupax need to be Admin? (on Windows)</small></a>
+                </div>
+                
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://gupax.io/#license">License</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://gupax.io/#mirror">Mirror</a>
+                </div>
+                
+                
+                <div class="toc-item">
+                    <a class="subtext" href="https://gupax.io/#donations">Donations</a>
+                </div>
+                
+                
+                <div class="toc-item-child">
+                    <a class="subtext" href="https://gupax.io/#donation-transparency"><small>- Donation transparency</small></a>
+                </div>
+                
+                
+                
+            </div>
+        </div>
+        
+        
+
+        <div class="content text">
+            
+            <div id="features" class="heading-text">About Gupax</div>
+            <p><code>Gupax</code> is a GUI for mining <a href="https://github.com/monero-project/monero"><strong>Monero</strong></a> on a decentralized pool using <a href="https://github.com/SChernykh/p2pool"><strong>P2Pool</strong></a> and <a href="https://github.com/xmrig/xmrig"><strong>XMRig</strong></a>. It also brings multiple features like running your own monero node, connecting your miners to a proxy  and optionally participating (but you will want to 😉) in the <a href="https://xmrvsbeast.com">XMRvsBeast raffle</a>.</p>
+<p><a href="https://github.com/gupax-io/gupax/actions/workflows/rust.yml"><img src="https://github.com/gupax-io/gupax/actions/workflows/rust.yml/badge.svg" alt="CI" /></a> <a href="https://github.com/gupax-io/gupax/actions/workflows/audit.yml"><img src="https://github.com/gupax-io/gupax/actions/workflows/rust.yml/badge.svg" alt="Audit" /></a></p>
+<h2 id="guide">Guide</h2>
+<h3 id="system-requirements">System requirements</h3>
+<ul>
+<li>OS: Any <a href="https://wikipedia.org/wiki/Long-term_support">LTS version</a> of: Windows, Linux, Mac OS</li>
+<li>CPU that support for OpenGL 3.0+/Vulkan/Metal/DX12 (not needed for daemon mode)</li>
+<li>Architecture: x86_64 for all, arm for macos, linux arm from compilation</li>
+</ul>
+<h3 id="video-guide">Video guide</h3>
+<p>See a 3-minute video guide on how to set-up Gupax</p>
+ <video style="width: 50%" controls>
+  <source src="https://user-images.githubusercontent.com/101352116/207978455-6ffdc0cc-204c-4594-9a2f-e10c505745bc.mp4" type="video/mp4">
+</video> 
+<p>Or a more recent <a href="https://www.youtube.com/watch?v=8_MOQHYRE1c&amp;embeds_referring_euri=http%3A%2F%2F127.0.0.1%3A1111%2F&amp;source_ve_path=MjM4NTE">video</a> by Anti MoonBoy</p>
+<h3 id="basic-setup">Basic setup:</h3>
+<ol>
+<li><a href="https://github.com/gupax-io/gupax/releases">Download the bundled version of Gupax</a></li>
+<li>Extract</li>
+<li>Add exception from anti-virus (Windows/Max)</li>
+<li>Launch Gupax</li>
+<li>Input your Monero address in the <code>P2Pool</code> tab</li>
+<li>Start P2Pool</li>
+<li>Start XMRig</li>
+</ol>
+<p>You are now mining to your own instance of P2Pool, welcome to the world of decentralized peer-to-peer mining!</p>
+<h3 id="documentation">Documentation</h3>
+<p>A more detailed documentation for advanced users and developers</p>
+<p>To come !</p>
+<h2 id="tabs">Tabs</h2>
+<p>Each service tab can be hidden in the settings (Gupax tab). Only the <code>P2Pool</code> and <code>XMRig</code> tabs are enabled by default to make Gupax more simple to new users.</p>
+<h3 id="simple-advanced">Simple/Advanced</h3>
+<p>Each services offers a simple sub-menu (accessible on the bottom bar). The simple mode will start the service with default working out of the box settings. The advanced mode allows powerful users to configure each services to correspond to their needs.</p>
+<h3 id="about">About</h3>
+<p>The About tab will show you a brief description of Gupax, along with the available shortcuts.
+<img src="https://gupax.io/assets/images/tabs/about.webp" alt="About Tab" /></p>
+<h3 id="status">Status</h3>
+<p>This tab has three sub-menus. By default the <code>Processes</code> sub-menu will appear.</p>
+<h4 id="processes">Processes</h4>
+<p>Monitoring of every services, as well as displaying resources usage of the system. You can hide the column of a service by checking the Gupax tab.
+<img src="https://gupax.io/assets/images/tabs/processes.webp" alt="Processes Tab" /></p>
+<h4 id="payouts">Payouts</h4>
+<p>You can see rewards that you were paid. You also have a tool to calculate rewards based on your hashrate. The calculator needs P2Pool to be synced so it has the needed data up to date.
+<img src="https://gupax.io/assets/images/tabs/payouts.webp" alt="Payouts Tab" /></p>
+<h4 id="benchmarks">Benchmarks</h4>
+<p>You can compare your CPU hashrate to the other CPUs of the same model, or even to other models.
+<img src="https://gupax.io/assets/images/tabs/benchmarks.webp" alt="Benchmark Tab" /></p>
+<h3 id="gupax">Gupax</h3>
+<p>This tab is the settings tab, where you can update Gupax, set where are the binaries for each services, change startup options, the UI scaling, which tabs are hidden and more.
+<img src="https://gupax.io/assets/images/tabs/gupax.webp" alt="Gupax Tab" /></p>
+<h3 id="node">Node</h3>
+<p>Hidden by default.
+You can start a local Monero Node in Gupax, or let it detect and use (if compatible with P2Pool) an already existing local node.
+<img src="https://gupax.io/assets/images/tabs/node.webp" alt="Node Tab" /></p>
+<h3 id="p2pool">P2Pool</h3>
+<p>This is where you set your XMR address on which you will receive your rewards. The simple mode will allow you to choose between using a local node or a remote node.
+Remote nodes are found by crawling the network. Gupax will do it automatically on startup, so you don't have to wait to start P2Pool. If the Node service is synced, P2Pool will switch to it by default.
+<img src="https://gupax.io/assets/images/tabs/p2pool.webp" alt="P2Pool Tab" /></p>
+<h4 id="crawler">Crawler</h4>
+<p>The crawler tab will allow you to tweak the filter of selected remote nodes to connect with P2Pool. For example, you can try to find nodes with a lower latency at the cost of a longer search.
+<img src="https://gupax.io/assets/images/tabs/crawler.webp" alt="Crawler Tab" /></p>
+<h3 id="xmrig">XMRig</h3>
+<p>The service that will start the mining locally. You can set a number of threads if you don't want all the power of your CPU to be dedicated to mining.
+<img src="https://gupax.io/assets/images/tabs/xmrig.webp" alt="XMRig Tab" /></p>
+<h3 id="proxy">Proxy</h3>
+<p>Hidden by default.
+Use this tab if you want to connect external miners to this instance of Gupax. In case you are participating in the XvB raffle, it will redirect all the hashrate at the decision of the XvB algorithm.
+<img src="https://gupax.io/assets/images/tabs/proxy.webp" alt="Proxy Tab" /></p>
+<h3 id="xvb">XvB</h3>
+<p>Hidden by default.
+Use this tab to easily split your hashrate between P2Pool and XMRvsBeast, increasing your chances of winning in the raffle while also supporting the Monero network via decentralizing the mining using using p2pool.
+<a href="https://xmrvsbeast.com/cgi-bin/p2pool_bonus_submit.cgi">Register</a> the same XMR address that you use in the P2Pool tab to participate.
+The simple mode will calculate which round you can access based on your current hashrate. The advanced tab allows you to have more manual controls.
+<img src="https://gupax.io/assets/images/tabs/xvb.webp" alt="XvB Tab" /></p>
+<h2 id="daemon-mode">Daemon mode</h2>
+<p>Gupax can be started as a daemon, without any GUI (intended for CLI only environment).<br />
+To do so, start the executable with the argument <code>--daemon</code>.<br />
+The daemon is configurable by the same configuration file that is used by the normal GUI mode that you can find in the following path depending on your OS</p>
+<table><thead><tr><th></th><th></th><th></th></tr></thead><tbody>
+<tr><td>Linux</td><td>$XDG_DATA_HOME or $HOME/.local/share/gupax</td><td>/home/alice/.local/state/gupax</td></tr>
+<tr><td>macOS</td><td>$HOME/Library/Application Support/Gupax</td><td>/Users/Alice/Library/Application Support/Gupax</td></tr>
+<tr><td>Windows</td><td>{FOLDERID_RoamingAppData}\Gupax</td><td>C:\Users\Alice\AppData\Roaming\Gupax</td></tr>
+</tbody></table>
+<p>Once started, you can enter the key 's' to print the status of started processes.</p>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<p>If you have any issue, feel free to ask for support in the <a href="https://gupax.io/%5C#xmrvsbeast:monero.social">xmrvsbeast matrix room</a> <a href="https://matrix.to/#/#xmrvsbeast:monero.social"><img src="https://matrix.to/img/matrix-badge.svg" alt="Chat on Matrix" /></a> or you can also just <a href="https://github.com/Cyrix126/gupax/issues/new/choose">open an issue</a> in this repo. You can also contact me through <a href="mailto:gupax@baermail.fr">email</a>.</p>
+<h3 id="windows">Windows</h3>
+<p>You must add an exception to your antivirus for the directory where Gupax is executed. Follow the step for Windows only, that starts at 30 seconds in the <a href="https://gupax.io/#video-guide">video guide</a>.</p>
+<h3 id="mac-osx">Mac OSX</h3>
+<p>You must remove Gupax app from quarantine with following command:<br />
+<em>If you have put Gupax.app in your Applications</em><br />
+<code>xattr -d com.apple.quarantine /Applications/Gupax.app</code></p>
+<h3 id="p2pool-connection-errors">P2Pool connection errors</h3>
+<p><strong>TL;DR: Run &amp; use your own Monero node.</strong></p>
+<p>If you are using the <a href="https://gupax.io/#p2pool">default P2Pool settings</a> then you are using a remote monero node that was found by crawling. Using a remote node is convenient but comes at the cost of privacy and reliability. You may encounter connections issues with theses nodes that look like this:</p>
+<pre><code>2023-01-05 12:27:37.7962 P2PServer peer 23.233.96.72:37888 is ahead on mainchain (height 2792939, your height 2792936). Is your monerod stuck or lagging?
+</code></pre>
+<pre><code>P2Pool get_info RPC request to host 157.173.123.245:RPC 18089:ZMQ 18084 failed: Error (empty response), trying again in 1 second
+</code></pre>
+<p>P2Pool should switch to a backup node in these case, but if all the backup nodes fails, P2Pool will also fail.</p>
+<p>To fix this you can start your own local node by using the <a href="https://gupax.io/#node">Node</a> tab.</p>
+<p>Running and using your own local Monero node improves privacy and ensures your connection is as stable as your own internet connection. This comes at the cost of downloading and syncing Monero's blockchain yourself (currently 100GB pruned). If you have the disk space, consider using the <a href="https://gupax.io/#node">Node</a> tab and connecting to your own Monero node.
+See this <a href="https://github.com/gupax-io/gupax/issues/51">issue</a>.</p>
+<h2 id="faq">FAQ</h2>
+<h3 id="where-are-updates-downloaded-from">Where are updates downloaded from?</h3>
+<p>The latest versions are downloaded using GitHub's API.</p>
+<ul>
+<li>Gupax <a href="https://github.com/gupax-io/gupax"><code>https://github.com/gupax-io/gupax</code></a></li>
+</ul>
+<h3 id="can-i-quit-mid-update">Can I quit mid-update?</h3>
+<p>If you started an update, you should let it finish. If the update has been stuck for a <em>long</em> time, quitting Gupax is probably okay. The worst that can happen is that your <code>Gupax/Node/P2Pool/XMRig/Proxy</code> binaries may be moved/deleted. Those can be easily redownloaded. Your actual <code>Gupax</code> user data (settings, custom nodes, pools, etc) is never touched.</p>
+<p>Although Gupax uses a temporary folder (<code>gupax_update_[A-Za-z0-9]</code>) to store temporary downloaded files, there aren't measures in place to revert an upgrade once the file swapping has actually started. If you quit Gupax anytime before the <code>Upgrading packages</code> phase (after metadata, download, extraction), you will technically be safe but this is not recommended as it is risky, especially since these updates can be very fast.</p>
+<h3 id="bundled-vs-standalone">Bundled vs Standalone</h3>
+<p><code>Bundled</code> Gupax comes with the latest version of Node/P2Pool/XMRig/Proxy already in the <code>zip/tar</code>.</p>
+<p><code>Standalone</code> only contains the Gupax executable.</p>
+<h3 id="how-much-memory-cpu-does-gupax-use">How much memory/cpu does Gupax use?</h3>
+<h4 id="memory">Memory</h4>
+<p>It is using about 10 megabytes of memory on x86_64</p>
+<h4 id="cpu">CPU</h4>
+<p>On a Thinkpad T440 with a i5-4300U (2013), it uses about 0.5% of the CPU when unfocused.
+When interacted (mouse moving over the window), it will uses about 4.5% CPU (because of <a href="https://gupax.io/wikipedia.org/wiki/Immediate_mode_(computer_graphics)">immediate mode</a> which allows a very fast reaction).</p>
+<h3 id="how-is-sudo-handled-on-macos-linux">How is sudo handled? (on macOS/Linux)</h3>
+<p><a href="https://github.com/gupax-io/gupax/blob/main/SUDO.md">See here for more info.</a></p>
+<h3 id="why-does-gupax-need-to-be-admin-on-windows">Why does Gupax need to be Admin? (on Windows)</h3>
+<p><a href="https://github.com/gupax-io/gupax/blob/main/ADMIN.md">See here for more info.</a></p>
+<h2 id="license">License</h2>
+<img src="assets/images/gplv3-with-text-136x68.png" alt="GPL v3" width="136"/>
+<p><a href="https://github.com/gupax-io/gupax/blob/main/LICENSE">Gupax</a>, <a href="https://github.com/SChernykh/p2pool/blob/master/LICENSE">P2Pool</a>, <a href="https://github.com/xmrig/xmrig/blob/master/LICENSE">XMRig</a> and <a href="https://github.com/xmrig/xmrig-proxy/blob/master/LICENSE">XMRig-Proxy</a> are licensed under the GNU General Public License v3.0.</p>
+<p><a href="https://github.com/monero-project/monero">Monerod</a> <a href="https://github.com/monero-project/monero?tab=License-1-ov-file">licence</a></p>
+<p><a href="https://gupax.io/./Cargo.toml">See the licenses of various dependencies.</a></p>
+<h2 id="mirror">Mirror</h2>
+<p>In case Github repository is down, you can still find the source code at <a href="https://librejo.monerodevs.org/Ecosystem/gupaxx">librejo</a></p>
+<h2 id="donations">Donations</h2>
+<p>If you'd like to thank me for the development of Gupax and/or motivate me to improve it you're welcome to send any amount of XMR to the following address:</p>
+<img src="assets/donation_qr.png" alt="GPL v3" width="256"/>
+<pre><code>4AGJScWSv45E28pmwck9YRP21KuwGx6fuMYV9kTxXFnWEij5FVEUyccBs7ExDy419DJXRPw3u57TH5BaGbsHTdnf6SvY5p5
+</code></pre>
+<p>Every donations will be converted to hours of work !</p>
+<h3 id="donation-transparency">Donation transparency</h3>
+<p>A Kuno page exist so you can easily keep track of the amount funded in this project.<br />
+<a href="https://kuno.anne.media/fundraiser/dsrr/">Gupax Kuno</a><br />
+In case you don't want to rely on the kuno website, the secret view key is:</p>
+<pre><code>6c6f841e1eda3fba95f2261baa4614e3ec614af2a97176bbae2c0be5281d1d0f
+</code></pre>
+
+            
+        </div>
+
+        
+        <div class="sidebar">
+        </div>
+        
+    </main>
+
+    
+    <footer>
+        <small class="subtext">
+            <a href="https://xmrbazaar.com/user/cyrix126">Cyrix126</a>
+        </small>
+    </footer>
+    
+</body>
+
+</html>

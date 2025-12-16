@@ -1,0 +1,6 @@
+- [ ] Download section from website with icons for each supported OS
+- [ ] Quick presentation before README
+- [ ] Up to date video guide
+- [ ] Documentation page
+- [ ] FAQ page
+- [ ] Changelog page
