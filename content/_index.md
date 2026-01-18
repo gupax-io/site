@@ -105,7 +105,7 @@ Once started, you can enter the key 's' to print the status of started processes
 
 
 ## Troubleshooting
-If you have any issue, feel free to ask for support in the [xmrvsbeast matrix room](\\#xmrvsbeast:monero.social) [![Chat on Matrix](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/#xmrvsbeast:monero.social) or you can also just [open an issue](https://github.com/Cyrix126/gupax/issues/new/choose) in this repo. You can also contact me through [email](mailto:gupax@baermail.fr).
+If you have any issue, feel free to ask for support in the [xmrvsbeast matrix room](\\#xmrvsbeast:monero.social) [![Chat on Matrix](https://matrix.to/img/matrix-badge.svg)](https://matrix.to/#/#xmrvsbeast:monero.social) or you can also just [open an issue](https://github.com/Cyrix126/gupax/issues/new/choose) in this repo. You can also contact me through [email](mailto:contact@gupax.io).
 ### Windows
 You must add an exception to your antivirus for the directory where Gupax is executed. Follow the step for Windows only, that starts at 30 seconds in the [video guide](#video-guide).
 ### Mac OSX
